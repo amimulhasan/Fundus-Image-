@@ -1,0 +1,63 @@
+# ============================================================
+# Topology-Aware Attention U-Net – Configuration
+# ============================================================
+
+seed: 42
+debug: false                    # true → 2 epochs, 128 px, small batch
+
+# -------------------- Data paths --------------------
+data:
+  images_dir: "data/raw/Fundus_CIMT_2903 Dataset/Fundus_CIMT_2903 Dataset"
+  masks_dir:  "data/raw/predicted_masks_5806"
+  csv_path:   "data/raw/data_info.csv"
+  av_masks_dir: "data/raw/Fundus_A and V/Fundus_A and V"
+  out_dir:    "results"
+  checkpoint_dir: "checkpoints"
+
+# -------------------- Image & loader --------------------
+img_size: 512
+batch_size: 8
+num_workers: 2
+
+# -------------------- Model --------------------
+model:
+  name: "AttentionUNet"
+  base_ch: 32                   # base channels
+  in_channels: 3
+  # multi-task heads
+  n_classes_vessel: 1
+  n_classes_av: 3               # background / artery / vein
+
+# -------------------- Training --------------------
+train:
+  epochs: 30
+  lr: 1.0e-4
+  weight_decay: 1.0e-5
+  amp: true                     # mixed precision
+  # loss weights
+  w_seg: 1.0
+  w_cls: 1.0
+  w_reg: 1.0
+  w_av:  1.0
+  # topology-aware vessel loss
+  lam: 0.5                      # Dice ↔ BCE balance
+  w_cl: 0.5                     # soft-clDice weight
+  w_wb: 0.5                     # thin/branch BCE weight
+  cl_iters: 10
+  thin_boost: 2.0
+  branch_boost: 4.0
+
+# -------------------- Evaluation --------------------
+eval:
+  bootstrap_n: 1000             # patient-level bootstrap for 95% CI
+  threshold: null               # null → chosen on validation set
+
+# -------------------- Journal style --------------------
+journal:
+  dpi: 600
+  font: "Times New Roman"
+  font_size: 12
+  font_weight: "bold"
+  save_tiff: true
+  figure_dir: "figures"
+  table_dir: "tables"
