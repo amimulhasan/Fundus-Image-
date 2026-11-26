@@ -1,0 +1,27 @@
+# Core
+torch>=2.0.0
+torchvision>=0.15.0
+numpy>=1.24
+pandas>=2.0
+Pillow>=10.0
+scikit-learn>=1.3
+scikit-image>=0.21
+scipy>=1.11
+
+# Visualization & journal quality
+matplotlib>=3.7
+seaborn>=0.13
+opencv-python-headless>=4.8
+
+# Config & utilities
+PyYAML>=6.0
+tqdm>=4.65
+einops>=0.7
+
+# Optional (for notebooks)
+jupyter>=1.0
+ipywidgets>=8.0
+tabulate>=0.9
+
+# Export
+openpyxl>=3.1

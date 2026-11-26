@@ -1,0 +1,55 @@
+# Data (too large for git)
+data/raw/
+data/processed/
+*.png
+*.jpg
+*.jpeg
+*.tif
+*.tiff
+!figures/*.png
+!docs/**/*.png
+
+# Checkpoints & large binaries
+checkpoints/
+*.pth
+*.pt
+*.ckpt
+*.h5
+*.hdf5
+
+# Results that can be regenerated
+results/*.csv
+results/*.json
+results/*.zip
+journal_package*.zip
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+.env
+.venv/
+*.egg-info/
+dist/
+build/
+
+# Jupyter
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+
+# IDE / OS
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+runs/
+wandb/
+lightning_logs/
