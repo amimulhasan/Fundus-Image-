@@ -1,0 +1,18 @@
+Task,Metric,Attention U-Net (95% CI),Swin-UNet (95% CI),Δ (Att − Swin),Better,CIs overlap
+CIMT classification,AUC,0.9472 (0.9058–0.9818),0.9437 (0.8969–0.9811),0.003549999999999942,Attention U-Net,yes
+CIMT classification,Accuracy,0.8950 (0.8349–0.9500),0.8900 (0.8300–0.9450),0.0050000000000000044,Attention U-Net,yes
+CIMT classification,Sensitivity,0.8700 (0.7700–0.9513),0.8700 (0.7778–0.9479),0.0,Tie,yes
+CIMT classification,Specificity,0.9200 (0.8431–0.9818),0.9100 (0.8333–0.9792),0.010000000000000009,Attention U-Net,yes
+CIMT classification,F1,0.8923 (0.8208–0.9515),0.8878 (0.8243–0.9445),0.004507692307692324,Attention U-Net,yes
+CIMT classification,MCC,0.7910 (0.6627–0.9001),0.7806 (0.6612–0.8910),0.010389355428379043,Attention U-Net,yes
+CIMT classification,Brier,0.1031 (0.0772–0.1314),0.1030 (0.0720–0.1383),0.00013894034514762288,Swin-UNet,yes
+CIMT regression,MAE (mm),0.0989 (0.0831–0.1139),0.1068 (0.0897–0.1239),-0.007929681229591368,Attention U-Net,yes
+CIMT regression,RMSE (mm),0.1263 (0.1076–0.1456),0.1372 (0.1178–0.1559),-0.0109312093333932,Attention U-Net,yes
+CIMT regression,R²,0.5668 (0.4527–0.6547),0.4885 (0.3195–0.5932),0.07829144939660465,Attention U-Net,yes
+CIMT regression,Pearson r,0.7592 (0.6983–0.8192),0.7397 (0.6777–0.8012),0.01947373965256427,Attention U-Net,yes
+Vessel segmentation,Dice,0.9311 (0.9288–0.9332),0.9074 (0.9047–0.9100),0.0236945725422113,Attention U-Net,no
+Vessel segmentation,IoU,0.8713 (0.8674–0.8749),0.8308 (0.8264–0.8351),0.04051349169412677,Attention U-Net,no
+Vessel segmentation,clDice,0.9538 (0.9517–0.9557),0.9270 (0.9248–0.9291),0.026837265422884782,Attention U-Net,no
+A/V segmentation,A/V Dice – artery,0.9021 (0.8968–0.9065),0.8606 (0.8549–0.8654),0.04153596926688441,Attention U-Net,no
+A/V segmentation,A/V Dice – vein,0.9264 (0.9235–0.9288),0.8931 (0.8896–0.8963),0.03329488525841673,Attention U-Net,no
+A/V segmentation,A/V Dice – mean,0.9143 (0.9104–0.9176),0.8768 (0.8726–0.8809),0.037465427262650564,Attention U-Net,no

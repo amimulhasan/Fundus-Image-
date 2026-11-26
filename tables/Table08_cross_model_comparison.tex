@@ -1,0 +1,16 @@
+\begin{table}
+\caption{Cross-model comparison on the held-out test set (200 images, patient-level split); the proposed model is Attention U-Net.}
+\label{tab:cross_model_comparison}
+\begin{tabular}{lrrrrrrrrrrrrr}
+\toprule
+Model & Params (M) & AUC & Accuracy & Sensitivity & Specificity & F1 & MAE (mm) & RMSE (mm) & R² & Vessel Dice & Vessel IoU & clDice & A/V mean Dice \\
+\midrule
+Attention U-Net (this work) & 7.9230 & 0.9472 & 0.8950 & 0.8700 & 0.9200 & 0.8923 & 0.0989 & 0.1263 & 0.5668 & 0.9311 & 0.8713 & 0.9538 & 0.9143 \\
+Swin-UNet & 27.1670 & 0.9437 & 0.8900 & 0.8700 & 0.9100 & 0.8878 & 0.1068 & 0.1372 & 0.4885 & 0.9074 & 0.8308 & 0.9270 & 0.8768 \\
+ResUNet++ & 4.4000 & 0.9433 & 0.8600 & NaN & NaN & NaN & 0.1077 & 0.1375 & 0.4864 & 0.9186 & 0.8497 & NaN & 0.9003 \\
+DCNU-AttUNet & 2.4960 & 0.9442 & 0.8400 & NaN & NaN & NaN & 0.1081 & 0.1390 & 0.4748 & 0.9156 & 0.8447 & NaN & 0.9063 \\
+Standard U-Net & 13.4670 & 0.9463 & 0.8700 & NaN & NaN & NaN & 0.1078 & 0.1385 & 0.4792 & 0.9237 & 0.8585 & NaN & 0.8959 \\
+DeepLabV3+ & 40.9100 & 0.9242 & 0.8450 & NaN & NaN & NaN & 0.1037 & 0.1325 & 0.5230 & 0.9074 & 0.8307 & NaN & 0.8563 \\
+\bottomrule
+\end{tabular}
+\end{table}

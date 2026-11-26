@@ -1,0 +1,22 @@
+\begin{table}
+\caption{Implementation details.}
+\label{tab:implementation_details}
+\begin{tabular}{ll}
+\toprule
+Item & Setting \\
+\midrule
+Backbone & Attention U-Net (Oktay et al.), base channels = 32, 4 attention-gated skips \\
+Input size & 512 × 512 RGB \\
+Optimiser & AdamW, lr = 0.0001, weight decay = 1e-05, cosine schedule \\
+Batch size / epochs & 8 / 30 (early stopping, patience 10) \\
+Mixed precision & True \\
+Augmentation & H-flip, ±15° rotation, Gaussian noise (train only) \\
+Segmentation loss & Dice + 0.5·soft-clDice + 0.5·topology-weighted BCE (thin ×2.0, branch ×4.0; skeleton iters = 10) \\
+A/V loss & (1−0.5)·CE + 0.5·Dice (foreground classes), masked to images with A/V labels \\
+Classification / regression loss & BCE with pos\_weight / Smooth-L1 on standardised thickness \\
+Task weights (seg/cls/reg/AV) & 1.0 / 1.0 / 1.0 / 1.0 \\
+Model selection & Best composite validation score (AUC, Dice, soft-clDice, A/V Dice, 1−MAE/SD) \\
+Seed / device & 42 / cuda \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,16 @@
+\begin{table}
+\caption{Confusion-matrix counts and derived classification metrics of all models (test set).}
+\label{tab:confusion_counts}
+\begin{tabular}{lrrrrrrrrl}
+\toprule
+Model & TN & FP & FN & TP & Accuracy & Sensitivity & Specificity & F1 & Source \\
+\midrule
+Attention U-Net (this work) & 92 & 8 & 13 & 87 & 0.8950 & 0.8700 & 0.9200 & 0.8923 & exact \\
+Swin-UNet & 91 & 9 & 13 & 87 & 0.8900 & 0.8700 & 0.9100 & 0.8878 & exact \\
+ResUNet++ & 86 & 14 & 14 & 86 & 0.8600 & NaN & NaN & NaN & reconstructed † \\
+DCNU-AttUNet & 84 & 16 & 16 & 84 & 0.8400 & NaN & NaN & NaN & reconstructed † \\
+Standard U-Net & 87 & 13 & 13 & 87 & 0.8700 & NaN & NaN & NaN & reconstructed † \\
+DeepLabV3+ & 84 & 16 & 15 & 85 & 0.8450 & NaN & NaN & NaN & reconstructed † \\
+\bottomrule
+\end{tabular}
+\end{table}

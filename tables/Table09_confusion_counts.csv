@@ -1,0 +1,7 @@
+Model,TN,FP,FN,TP,Accuracy,Sensitivity,Specificity,F1,Source
+Attention U-Net (this work),92,8,13,87,0.895,0.87,0.92,0.8923076923076924,exact
+Swin-UNet,91,9,13,87,0.89,0.87,0.91,0.8877551020408163,exact
+ResUNet++,86,14,14,86,0.86,,,,reconstructed †
+DCNU-AttUNet,84,16,16,84,0.84,,,,reconstructed †
+Standard U-Net,87,13,13,87,0.87,,,,reconstructed †
+DeepLabV3+,84,16,15,85,0.845,,,,reconstructed †

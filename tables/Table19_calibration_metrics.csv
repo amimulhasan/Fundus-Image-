@@ -1,0 +1,5 @@
+Metric,Value
+Brier score,0.10313894034514762
+Expected calibration error (8 quantile bins),0.11720028180629016
+Calibration slope (ideal 1),1.9601912380554578
+Calibration intercept (ideal 0),0.2400014424924028

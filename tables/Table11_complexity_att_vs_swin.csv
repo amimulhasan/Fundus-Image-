@@ -1,0 +1,3 @@
+Model,Params (M),Compute (as reported),Latency (ms/img),Setting
+Attention U-Net (this work),7.923042,49.4 GMACs,50.099241733551025,"512×512, batch 1, CUDA"
+Swin-UNet,27.167,60.25 GFLOPs,46.45,"512×512, batch 1, Tesla T4 fp32"

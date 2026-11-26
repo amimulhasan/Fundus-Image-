@@ -1,0 +1,17 @@
+\begin{table}
+\caption{Model complexity of the proposed multi-task Attention U-Net.}
+\label{tab:model_complexity}
+\begin{tabular}{lrr}
+\toprule
+Component & Parameters (M) & Share (\%) \\
+\midrule
+Encoder & 4.7142 & 59.5000 \\
+Attention Gates & 0.0887 & 1.1000 \\
+Decoder & 3.0488 & 38.5000 \\
+Vessel head & 0.0000 & 0.0000 \\
+A/V head & 0.0001 & 0.0000 \\
+Clinical + shared FC + cls/reg & 0.0712 & 0.9000 \\
+Total & 7.9230 & 100.0000 \\
+\bottomrule
+\end{tabular}
+\end{table}

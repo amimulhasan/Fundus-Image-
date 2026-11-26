@@ -1,0 +1,16 @@
+\begin{table}
+\caption{Rank of each model per metric (1 = best) and mean rank over the eight metrics reported by all models.}
+\label{tab:model_ranking}
+\begin{tabular}{lrrrrrrrrrr}
+\toprule
+Model & AUC & Accuracy & R² & Vessel Dice & Vessel IoU & A/V mean Dice & MAE (mm) & RMSE (mm) & Mean rank & Overall \\
+\midrule
+Attention U-Net (this work) & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 & 1 \\
+Standard U-Net & 2.00 & 3.00 & 5.00 & 2.00 & 2.00 & 4.00 & 5.00 & 5.00 & 3.50 & 2 \\
+ResUNet++ & 5.00 & 4.00 & 4.00 & 3.00 & 3.00 & 3.00 & 4.00 & 4.00 & 3.75 & 3 \\
+Swin-UNet & 4.00 & 2.00 & 3.00 & 5.00 & 5.00 & 5.00 & 3.00 & 3.00 & 3.75 & 3 \\
+DeepLabV3+ & 6.00 & 5.00 & 2.00 & 5.00 & 6.00 & 6.00 & 2.00 & 2.00 & 4.25 & 5 \\
+DCNU-AttUNet & 3.00 & 6.00 & 6.00 & 4.00 & 4.00 & 2.00 & 6.00 & 6.00 & 4.62 & 6 \\
+\bottomrule
+\end{tabular}
+\end{table}

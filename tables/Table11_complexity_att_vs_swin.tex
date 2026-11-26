@@ -1,0 +1,12 @@
+\begin{table}
+\caption{Model size and inference cost of the proposed Attention U-Net and Swin-UNet.}
+\label{tab:complexity_att_vs_swin}
+\begin{tabular}{lrlrl}
+\toprule
+Model & Params (M) & Compute (as reported) & Latency (ms/img) & Setting \\
+\midrule
+Attention U-Net (this work) & 7.923 & 49.4 GMACs & 50.099 & 512×512, batch 1, CUDA \\
+Swin-UNet & 27.167 & 60.25 GFLOPs & 46.450 & 512×512, batch 1, Tesla T4 fp32 \\
+\bottomrule
+\end{tabular}
+\end{table}
